@@ -1,0 +1,56 @@
+<span>
+	<div class="applicationContent" >
+		<div class="cityNamePanel">
+			<div class="col-xs-4 input-group">
+				<input type="text" class="form-control" placeholder="City" ng-model="newCityName"></input>
+				<div class="input-group-btn">
+					<button class="btn btn-default" style="background-color:#44B192;color:white;" type="button" ng-click="addCity(newCityName)">ADD</button>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-2" style="padding-top:5px;" ng-repeat='city in cityNames'><a class="thumbnail" ng-click="getWeatherForecast(city)">{{city}}</a></div>
+			</div>
+		</div>
+		<div class="weatherDetailsPanel">
+			<div class="row">
+				<div class="col-xs-5 details">
+					<center>
+					<span class="glyphicon glyphicon-cloud"></span><br>
+					<img height="100px" width="100px" src="{{weatherIconURL}}" ></img>
+					<font size="20">{{weatherForecastData.main.temp - 272.15 |number : fractionSize}}C</font>
+					
+					<div style="fontsize:15;">{{weatherForecastData.weather[0].description}}<br>{{weatherForecastData.name}}</div>
+					</center>
+				</div>
+				<div class="col-xs-7 details">
+					<div class="panel panel-default">
+						<div class="panel panel-heading">Temperature Variations</div>
+						<div class="panel panel-body">
+							Max Temp : {{weatherForecastData.main.temp_max - 272.15 |number : fractionSize}}<br>Min Temp : {{weatherForecastData.main.temp_min - 272.15 |number : fractionSize}}<br>
+						</div>
+					</div>
+					<div class="panel panel-default">
+						<div class="panel panel-heading">Winds</div>
+						<div class="panel panel-body">
+							Degree : {{weatherForecastData.wind.deg}}<br>Speed : {{weatherForecastData.wind.speed}}<br>
+						</div>
+					</div>
+					<div class="panel panel-default">
+						<div class="panel panel-heading">Co-ordinates</div>
+						<div class="panel panel-body">
+							Latitude  :{{weatherForecastData.coord.lat}}<br>Longitude :{{weatherForecastData.coord.lon}}<br>
+						</div>
+					</div>
+					<div class="panel panel-default">
+						<div class="panel panel-heading">Moisture</div>
+						<div class="panel panel-body">
+							Humidity : {{weatherForecastData.main.humidity}}<br>Rain : {{weatherForecastData.rain.3h}}<br>	
+						</div>
+					</div>
+					
+				
+				</div>
+			</div>
+		</div>
+	</div>	
+</span>

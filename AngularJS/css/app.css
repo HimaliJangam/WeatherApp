@@ -1,0 +1,87 @@
+
+body
+{
+	color:white;
+}
+/*Used for alignment of sections inside weatherDetailsPanel*/
+.details
+{
+	height:100%;
+	vertical-align: middle;
+}
+/*Used for Forecast details section*/
+.weatherDetailsPanel
+{
+	width: 100%;
+	height:70%;	
+}
+
+/*Used for the choice of cities section*/
+.cityNamePanel
+{
+	width: 100%;
+	height:27%;
+	padding-left:1%;
+	padding-right:1%;
+	padding-top:1%;
+	padding-bottom:1%;
+	background-color:white;
+	overflow-y:scroll;
+}
+
+/*Size scaling for the glyphicon*/
+.glyphicon.glyphicon-cloud
+{
+	font-size:200px;
+	padding-top:8%;
+}
+
+/*used for alignment of detailed forecast infornation panels*/
+.panel.panel-default
+{
+	width:90%;
+	height:80px;
+	margin-left:5%;
+	margin-top:3.5%;
+}
+
+/*used for alignment of detailed forecast infornation panels*/
+.panel.panel-heading
+{
+	color:#44B192;	
+	background-color:#C4FEEE;
+	height:40px;
+	margin-bottom:0px !important;
+}
+
+/*used for alignment of detailed forecast infornation panels*/
+.panel.panel-body
+{
+	color:#44B192;
+	padding:0px !important;
+padding-left:5% !important;	
+}
+
+/*The names of cities are displayed in thumbnails*/
+.thumbnail
+{
+	
+	background-color:#44B192;
+	text-align:center;
+	vertical-align: middle;
+	color:white;
+	/* border: 0.2em solid blue; */
+	/* margin-bottom:5% !important; */
+	
+}
+
+.applicationContent
+{
+	overflow-x: auto;
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+	top: 0;
+	background-color:#44B192;
+	color:white;
+}
